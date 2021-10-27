@@ -1,23 +1,23 @@
 # Computer Security
  
 O objetivo principal deste trabalho é o de construir uma plataforma para assinar e transmitir
-ficheiros de um modo seguro, entre dois ou mais utilizadores, recorrendo apenas a mecanismos da criptografia simétrica e a um agente de confiança
+ficheiros de um modo seguro, entre dois ou mais utilizadores, recorrendo apenas a mecanismos da criptografia simétrica e a um agente de confiança.
 
- Entre outras, apontam-se as seguintes funcionalidades básicas do sistema a desenvolver:
+Entre outras, apontam-se as seguintes funcionalidades básicas do sistema a desenvolver:
  
-• deve ser possível fazer o registo junto do agente de confiança;
+• Deve ser possível fazer o registo junto do agente de confiança;
 
-• o utilizador, depois de devidamente autenticado no sistema, deve poder escolher se
+• O utilizador, depois de devidamente autenticado no sistema, deve poder escolher se
 quer cifrar ou assinar um ficheiro antes de o enviar; deve também poder escolher o
-utilizador para o qual quer enviar o ficheiro a partir de uma lista ligados ao sistema;
+utilizador para o qual quer enviar o ficheiro a partir de uma lista de utilizadores que se encontrem ligados ao sistema;
 
-• caso o utilizador escolha não cifrar o ficheiro a transmitir, este deve ser acompanhado
+• Caso o utilizador escolha não cifrar o ficheiro a transmitir, este deve ser acompanhado
 de um código de autenticação da mensagem (deve ser usado um Hash based Message Authentication Code (HMAC) para o efeito);
 
-• as chaves de sessão devem ser geradas por um dos clientes e trocadas via agente de
+• As chaves de sessão devem ser geradas por um dos clientes e trocadas via agente de
 confiança;
 
-• o agente de confiança deve ser capaz de fazer assinaturas digitais de ficheiros transmitidos por utilizadores autenticados do sistema.
+• O agente de confiança deve ser capaz de fazer assinaturas digitais de ficheiros transmitidos por utilizadores autenticados do sistema.
 
 Note que a definição deste projeto indicia que o sistema só poderá estar completamente
 operacional quando estão ligados, pelo menos, três intervenientes: (i) a aplicação (cliente)
@@ -32,20 +32,19 @@ sistema aquando da inicialização de determinado cliente.
 
 Podem fortalecer o trabalho e conhecimento através da implementação das seguintes funcionalidades:
 
-• permitir que apenas as primeiras chaves de cifra de chaves de sessão sejam trocadas
+• Permitir que apenas as primeiras chaves de cifra de chaves de sessão sejam trocadas
 usando criptografia assimétrica.
 
-• garantir que as credenciais de autenticação no servidor / agente de confiança (i.e.
+• Garantir que as credenciais de autenticação no servidor / agente de confiança (i.e.
 username e password) são trocadas de forma segura.
 
-• assegurar que as chaves de cifra de chaves de sessão mudam sempre que o utilizador
+• Assegurar que as chaves de cifra de chaves de sessão mudam sempre que o utilizador
 faz login no sistema, sem que se perca sincronismo e nunca recorrendo a mecanismos
 de criptografia simétrica (pesquisar por one time password);
 
-• permitir que o utilizador escolha a cifra a utilizar e o comprimento da chave de cifra;
+• Permitir que o utilizador escolha a cifra a utilizar e o comprimento da chave de cifra;
 
-• ter um help bastante completo.
+• Ter um help bastante completo.
 
-Pensem numa forma de atacar o sistema (uma falha da sua implementação) e dediquemlhe uma secção no relatório. Notem que, para efeitos de avaliação e prototipagem, o
-sistema desenvolvido pode executar localmente todos os seus componentes/aplicações/-
-programas, desde que simule ou concretize a arquitetura sugerida (i.e., não precisa necessariamente executar em rede).
+Pensem numa forma de atacar o sistema (uma falha da sua implementação) e dediquem-lhe uma secção no relatório. Notem que, para efeitos de avaliação e prototipagem, o
+sistema desenvolvido pode executar localmente todos os seus componentes/aplicações/programas, desde que simule ou concretize a arquitetura sugerida (i.e., não precisa necessariamente de executar em rede).
